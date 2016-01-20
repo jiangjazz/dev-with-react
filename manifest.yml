@@ -1,0 +1,5 @@
+###我的小网站
+applications:
+- name: react
+  command: node server.js
+  memory: 512M

@@ -3,8 +3,8 @@ process.env.NODE_ENV =  process.env.NODE_ENV || 'development';
 
 
 //公共模块引入
-var http = require('http'),
-    express = require('express');
+/*var http = require('http'),
+    express = require('express');*/
 
 //私有模块引入
 var express = require('./config/express'),
