@@ -22,6 +22,8 @@ node server
 webpack-dev-server --port 8080 --host 127.0.0.1 --inline
 启动webpack服务
 
+## 查看
+打开浏览器，查看 127.0.0.1:9090
 ## 版本
 v 1.0.0
 
