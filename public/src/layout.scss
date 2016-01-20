@@ -1,0 +1,89 @@
+@charset "utf-8";
+@import './public.scss';
+/****************
+ * 布局模块样式
+ */
+//头部导航模块
+.m-topNavGroup{
+    height: 60px;
+    line-height: 60px;
+    font-size: $fs_nav;
+    background-color: $bg_nav;
+    @include absolute(0, 0, auto, 0);
+    .logo{
+        margin-left: 10px;
+        min-width: 25%;
+        letter-spacing: 4px;
+        color: $fc_normal;
+        font-size: $fs_h1*1.2;
+        font-style: italic;
+        font-family: "Arial";
+        font-weight: bold;
+    }
+    .header-collaspe{
+        display: none;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        cursor: pointer;
+        .bars{
+            display: block;
+            margin: 5px 0;
+            height: 5px;
+            background-color: $bg_navHover;
+            @include border-radius(3px);
+        }
+    }
+    .header-collgroup{
+        height: 0;
+        border: none;
+        overflow: hidden;
+        @include transition(all .5s ease);
+        nav{
+            display: block;
+        }
+        a{
+            display: block;
+            @include transition(all .3s ease);
+        }
+    }
+    >nav{
+        margin: 0 20px 0 40px;
+        float: left;
+    }
+    a{
+        @extend %aNav;
+    }
+    @include media(large){
+        >nav{
+            display: none;
+        }
+        .header-collaspe{
+            display: block;
+        }
+        .header-collgroup{
+            margin: 0;
+            width: 100%;
+            position: absolute;
+            top: 62px;
+            left: 0;
+            z-index: 9999;
+            &.active{
+                height: 182px;
+            }
+            nav{
+                display: block;
+                border: 1px solid $bg_nav;
+                @include box-sizing(border-box);
+            }
+        }
+    }
+}
+//主题内容块
+.m-content{
+    padding: 40px 20px;
+    @include absolute(60px, 0, 0, 0);
+    background-color: $bg_body;
+}
