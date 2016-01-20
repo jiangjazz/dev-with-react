@@ -33,7 +33,7 @@ module.exports = function(){
     require('../app/routes/index.js')(app);
 
     //设置静态资源文件夹
-    //app.use(express.static('./public/'));
+    app.use(express.static('./public/dist/'));
 
     return app;
 };
